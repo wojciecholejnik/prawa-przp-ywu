@@ -9,7 +9,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-
+  z-index: 999;
 }
 
 .window {
@@ -20,7 +20,100 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  // box-shadow: 5px 5px 10px;
   border-radius: 10px;
   background-color: lightgray;
+}
+
+.calculate {
+  background-color: gray;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  margin-top: 50px;
+  padding: 10px 0;
+}
+
+.radiuses {
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+  background-color: lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.radius1, .radius2 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.values {
+  display: flex;
+  padding: 10px 0;
+}
+
+p {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.doubleData {
+  width: 80%;
+  margin: 10px auto;
+  height: 200px;
+  background-color: lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  svg {
+    font-size: 20px;
+    border: 1px solid gray;
+    margin: 1px;
+    border-radius: 50%;
+  }
+}
+
+.sync {
+  margin-top: 10px;
+  label {
+    margin-left: 4px;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .window {
+    width: 99vw;
+  }
+
+  .radiuses {
+    width: 99%;
+  }
+
+  .calculate {
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 90%;
+    right: 10px;
+  }
 }
