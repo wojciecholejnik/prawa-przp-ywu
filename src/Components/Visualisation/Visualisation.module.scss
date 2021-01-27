@@ -64,8 +64,18 @@
   }
 }
 
-
-//***********************************
+@media all and (max-width: 650px) {
+  .tubesContainer1, .tubesContainer2 {
+    width: 90px;
+  }
+  .tubesContainer1 {
+    left: 20%;
+  }
+  .tubesContainer2 {
+    right: 20%;
+  }
+}
+  //***********************************
 .radius1Vis {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
