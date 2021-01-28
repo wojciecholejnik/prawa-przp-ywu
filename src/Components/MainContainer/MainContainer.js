@@ -2,7 +2,7 @@ import React from 'react';
 // import Calculate from '../Calculate/Calculate';
 import Visualisation from '../Visualisation/Visualisation';
 import styles from './MainContainer.module.scss';
-import logo from './ump-logo.png';
+// import logo from './ump-logo.png';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
@@ -62,7 +62,7 @@ class MainContainer extends React.Component {
 
     return (
       <div className={styles.component}>
-        <img alt='ump-logo' className={styles.logo} src={logo}></img>
+        {/* <img alt='ump-logo' className={styles.logo} src={logo}></img> */}
         <div id={'window'} className={styles.window}>
           <Visualisation radius1={this.state.radius1} radius2={this.state.radius2} />
           {/* -*-*-*-*-*-*-*-*-*-*-*-* */}
