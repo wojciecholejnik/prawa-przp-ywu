@@ -1,6 +1,9 @@
 .component {
   background-color: lightgray;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -13,12 +16,12 @@
 }
 
 .window {
-  width: 60vw;
-  height: 80vh;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   border-radius: 10px;
   background-color: lightgray;
@@ -26,17 +29,18 @@
 
 .calculate {
   background-color: gray;
-  height: 50%;
+  height: 500px;
+  width: 600px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 10px 0;
 }
 
 .radiuses {
   width: 80%;
   margin: 0 auto;
-  height: 100px;
+  height: 110px;
   background-color: lightgray;
   border-radius: 10px;
   display: flex;
@@ -52,14 +56,16 @@
 
 .values {
   display: flex;
-  padding: 10px 0;
 }
-
-p {
-  height: 48px;
-  line-height: 48px;
-  padding: 0 5px;
-  font-size: 20px;
+.valueContainer {
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.value {
+font-size: 25px;
 }
 
 h5 {
@@ -82,10 +88,14 @@ h5 {
   flex-direction: column;
   justify-content: center;
   svg {
-    font-size: 20px;
+    font-size: 30px;
     border: 1px solid gray;
     margin: 1px;
     border-radius: 50%;
+  }
+
+  svg:hover {
+    background-color: gray;
   }
 }
 
@@ -96,17 +106,24 @@ h5 {
   }
 }
 
+.density {
+  h5 {
+    margin-top: 100px;
+  }
+}
+
 @media all and (max-width: 650px) {
   .window {
     width: 99vw;
   }
 
-  .radiuses, .doubleData {
+  .radiuses {
     width: 99%;
   }
 
   .calculate {
     margin-top: 10px;
+    height: 60%;
   }
 
   .logo {
@@ -115,5 +132,19 @@ h5 {
     position: absolute;
     top: 90%;
     right: 10px;
+  }
+
+  .doubleData {
+    width: 99%;
+    margin: 10px auto;
+    height: 250px;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .density {
+    border: 1px solid black;
   }
 }

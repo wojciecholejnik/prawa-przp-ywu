@@ -70,10 +70,12 @@ class MainContainer extends React.Component {
             {/*RADIUSES*/}
             <div className={styles.radiuses}>
               <div className={styles.radius1}>
-                <h5 className={styles.radiusLabel}>Radius 1</h5>
+                <h5 className={styles.radiusLabel}>R a d i u s</h5>
                 <div className={styles.values}>
                   <div className={styles.valueContainer}>
-                    <p className={styles.value}>{parseValue(this.state.radius1)} mm</p>
+                    <div className={styles.value}>{parseValue(this.state.radius1)}</div>
+                    <div className={styles.valueUnit}>mm</div>
+
                   </div>
                   <div className={styles.buttons}>
                     <ArrowDropUpIcon className={styles.arrow} onClick={()=>{changeValue(this.state.radius1, 'increase', 1, 'radius');}}/>
@@ -86,10 +88,12 @@ class MainContainer extends React.Component {
                 <label>Sync</label>
               </div>
               <div className={styles.radius2}>
-                <h5 className={styles.radiusLabel}>Radius 2</h5>
+                <h5 className={styles.radiusLabel}>R a d i u s</h5>
                 <div className={styles.values}>
                   <div className={styles.valueContainer}>
-                    <p className={styles.value}>{parseValue(this.state.radius2)} mm</p>
+                    <div className={styles.value}>{parseValue(this.state.radius2)}</div>
+                    <div className={styles.valueUnit}>mm</div>
+
                   </div>
                   <div className={styles.buttons}>
                     <ArrowDropUpIcon onClick={()=>{changeValue(this.state.radius2, 'increase', 2, 'radius');}}/>
@@ -99,42 +103,51 @@ class MainContainer extends React.Component {
               </div>
             </div>
 
-            <div className={styles.doubleData}>
-              {/*VOLUME-FLOW */}
-              <div className={styles.radius1}>
-                <h5 className={styles.radiusLabel}>Volume flow</h5>
-                <div className={styles.values}>
-                  <div className={styles.valueContainer}>
-                    <p className={styles.value}>{parseValue(this.state.volumeFlow)} dm^3/min </p>
-                  </div>
-                  <div className={styles.buttons}>
-                    <ArrowDropUpIcon className={styles.arrow} onClick={()=>{changeValue(this.state.volumeFlow, 'increase', 1, 'volumeFlow');}}/>
-                    <ArrowDropDownIcon className={styles.arrow} onClick={()=>{changeValue(this.state.volumeFlow, 'decrease', 1, 'volumeFlow');}}/>
-                  </div>
-                </div>
-              </div>
-              {/*VISCOSITY*/}
-              <div className={styles.radius1}>
-                <h5 className={styles.radiusLabel}>Viscosity</h5>
-                <div className={styles.values}>
-                  <div className={styles.valueContainer}>
-                    <p className={styles.value}>{parseValue(this.state.viscosity)} mPa*s</p>
-                  </div>
-                  <div className={styles.buttons}>
-                    <ArrowDropUpIcon className={styles.arrow} onClick={()=>{changeValue(this.state.viscosity, 'increase', 1, 'viscosity');}}/>
-                    <ArrowDropDownIcon className={styles.arrow} onClick={()=>{changeValue(this.state.viscosity, 'decrease', 1, 'viscosity');}}/>
+            <div>
+              <div className={styles.doubleData}>
+                {/*VOLUME-FLOW */}
+                <div className={styles.radius1}>
+                  <h5 className={styles.radiusLabel}>Volume flow</h5>
+                  <div className={styles.values}>
+                    <div className={styles.valueContainer}>
+                      <div className={styles.value}>{parseValue(this.state.volumeFlow)}</div>
+                      <div className={styles.valueUnit}>dm^3/min</div>
+                    </div>
+                    <div className={styles.buttons}>
+                      <ArrowDropUpIcon className={styles.arrow} onClick={()=>{changeValue(this.state.volumeFlow, 'increase', 1, 'volumeFlow');}}/>
+                      <ArrowDropDownIcon className={styles.arrow} onClick={()=>{changeValue(this.state.volumeFlow, 'decrease', 1, 'volumeFlow');}}/>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/*DENSITY*/}
-              <div className={styles.radius1}>
-                <h5 className={styles.radiusLabel}>Density</h5>
-                <div className={styles.values}>
-                  <div className={styles.valueContainer}>
-                    <p className={styles.value}>{parseValue(this.state.density)} kg/m^3</p>
+
+                {/*DENSITY*/}
+                <div id={'density'} className={styles.density}>
+                  <h5 className={styles.radiusLabel}>Density</h5>
+                  <div className={styles.values}>
+                    <div className={styles.valueContainer}>
+                      <div className={styles.value}>{parseValue(this.state.density)} </div>
+                      <div className={styles.valueUnit}>kg/m^3</div>
+                    </div>
                   </div>
                 </div>
+
+                {/*VISCOSITY*/}
+                <div className={styles.radius1}>
+                  <h5 className={styles.radiusLabel}>Viscosity</h5>
+                  <div className={styles.values}>
+                    <div className={styles.valueContainer}>
+                      <div className={styles.value}>{parseValue(this.state.viscosity)}</div>
+                      <div className={styles.valueUnit}>mPa*s</div>
+                    </div>
+                    <div className={styles.buttons}>
+                      <ArrowDropUpIcon className={styles.arrow} onClick={()=>{changeValue(this.state.viscosity, 'increase', 1, 'viscosity');}}/>
+                      <ArrowDropDownIcon className={styles.arrow} onClick={()=>{changeValue(this.state.viscosity, 'decrease', 1, 'viscosity');}}/>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
             </div>
 
           </div>
